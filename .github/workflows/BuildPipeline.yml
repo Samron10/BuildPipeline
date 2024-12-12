@@ -18,5 +18,6 @@ jobs:
         with:
           projectKey: ${{ secrets.SONAR_PROJECT_KEY }}
           organization: ${{ secrets.SONAR_ORGANIZATION }}
-          token: ${{ secrets.SONAR_TOKEN }}  
+          token: ${{ secrets.SONAR_TOKEN }} 
+          
 
