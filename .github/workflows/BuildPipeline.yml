@@ -1,33 +1,15 @@
-name: BuildPipeline
+name: Simple Workflow
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+on: [push]
 
 jobs:
-  build:
-    name: Build Project
+  hello_world:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run build
-        run: npm run build
-
-      - name: Run tests
-        run: npm test
+      - name: Print Hello World
+        run: echo "Hello, World!"
 
